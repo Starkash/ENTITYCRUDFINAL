@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUDwithEntityFrameWork.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220225102154_databaseMvcEntity")]
-    partial class databaseMvcEntity
+    [Migration("20220310230124_m3")]
+    partial class m3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,6 +45,36 @@ namespace CRUDwithEntityFrameWork.Migrations
                     b.HasIndex("LocationId");
 
                     b.ToTable("Customers");
+                });
+
+            modelBuilder.Entity("CRUDwithEntityFrameWork.Models.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("CRUDwithEntityFrameWork.Models.Location", b =>
