@@ -2,7 +2,7 @@
 
 namespace CRUDwithEntityFrameWork.Migrations
 {
-    public partial class m3 : Migration
+    public partial class emp : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

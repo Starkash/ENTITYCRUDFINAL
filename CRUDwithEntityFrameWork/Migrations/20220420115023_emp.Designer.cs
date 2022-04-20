@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUDwithEntityFrameWork.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220310230124_m3")]
-    partial class m3
+    [Migration("20220420115023_emp")]
+    partial class emp
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
